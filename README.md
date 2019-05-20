@@ -1,13 +1,17 @@
 # This is a High-Performance OpenRTB Demand Side Platform (DSP) / Bidder written in PHP.
 
 **Requirements:**
-NGINX
-PHP-FPM 7.x
-REDIS
-MYSQL / MARIADB
-USTOR-64 (http://ustor-c.github.io/)
+- NGINX
 
-#Licence
+- PHP-FPM 7.x
+
+- REDIS
+
+- MYSQL / MARIADB
+
+- USTOR-64 (http://ustor-c.github.io/)
+
+# Licence
 
 ```
     This program is free software: you can redistribute it and/or modify
