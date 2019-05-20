@@ -1,0 +1,1 @@
+while true ; do /usr/bin/php /usr/share/nginx/rtb.voxdsp.com/html/core/cron_mlpt.php & sleep 1; done
