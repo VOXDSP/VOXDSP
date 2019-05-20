@@ -2,13 +2,9 @@
 
 **Requirements:**
 - NGINX
-
 - PHP-FPM 7.x
-
 - REDIS
-
 - MYSQL / MARIADB
-
 - USTOR-64 (http://ustor-c.github.io/)
 
 # Licence
