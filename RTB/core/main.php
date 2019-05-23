@@ -176,7 +176,7 @@
 	}
 
 
-	//Fuck you smaato, why!? WHY
+	//Damn you smaato, why!? WHY
 	function smaato_javaAd($script, $width, $height)
 	{
 		return '<ad xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://standards.smaato.com/ad/smaato_ad_v0.9.xsd" modelVersion="0.9"><richmediaAd><content><![CDATA[ '.$script.' ]]></content><width>'.$width.'</width><height>'.$height.'</height></richmediaAd></ad>';
@@ -343,9 +343,9 @@
 	//header("Connection: Keep-alive");
 	$pi = file_get_contents("php://input");
 	$bid = strtolower($pi); //Lower it for string searches
-	$bid = str_replace(': ', ':', $bid); //wont fuck up decode
+	$bid = str_replace(': ', ':', $bid); //wont screw up decode
 	$jsonbid = json_decode($pi);
-	$bid = str_replace('\/', '/', $bid); //would fuckup decode
+	$bid = str_replace('\/', '/', $bid); //would screw up decode
 
 	//If the bid is timestamped, check how old the bid is, in seconds (SSPHWY)
 	/*if(isset($jsonbid->{'ext'}->{'timestamp'}))
