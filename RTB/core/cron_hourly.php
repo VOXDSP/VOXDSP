@@ -3,14 +3,13 @@
     set_time_limit(0);
     require_once "/usr/share/nginx/app.voxdsp.com/html/platform/config.php";
 
-
     //Loop all campaigns
     $r = $mysql->query("SELECT * FROM `campaigns` WHERE active=1;");
     if($r)
     {
         while($ro = $r->fetch_assoc())
         {
-            //Do the campaigns thing for redis
+            //Do the campaigns for redis
             $tw = 0;
             $tb = 0;
             $th = 0;
