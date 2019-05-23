@@ -17,33 +17,21 @@
 		catch(Exception $e){}
 	}
 
-function add_ustor($idfa, $expire_seconds)
-{
-    if($expire_seconds == 0){$expire_seconds = 86400;}
-    if($idfa == ''){$idfa = "u";}
-    $fp = stream_socket_client("udp://127.0.0.1:7810", $errno, $errstr, 1);
-    if($fp)
-    {
-        stream_socket_sendto($fp, "$" . $idfa . "|" . $expire_seconds);
-        fclose($fp);
-    }
-}
+	function add_ustor($idfa, $expire_seconds)
+	{
+	    if($expire_seconds == 0){$expire_seconds = 86400;}
+	    if($idfa == ''){$idfa = "u";}
+	    $fp = stream_socket_client("udp://127.0.0.1:7810", $errno, $errstr, 1);
+	    if($fp)
+	    {
+		stream_socket_sendto($fp, "$" . $idfa . "|" . $expire_seconds);
+		fclose($fp);
+	    }
+	}
 
 	//Get variable
 	if(isset($_GET['uid']))
-	{
-		/*$fp = stream_socket_client("tcp://127.0.0.1:6810", $errno, $errstr, 1);
-		if($fp)
-		{
-			fwrite($fp, "$" . $_GET['dom'] . " " . $_GET['uid']);
-			fclose($fp);
-		}*/
-		
-		//$un = $_GET['e'].'-u-'.$_GET['uid'];
-		//$redis->set($un, 'n');
-		//$redis->setTimeout($un, $_GET['uh']*3600); //24 hc
 		add_ustor($_GET['uid'], $_GET['uh']*3600);
-	}
 
 	//Start a redis pipe
 	$pipe = $redis->multi(Redis::PIPELINE);
