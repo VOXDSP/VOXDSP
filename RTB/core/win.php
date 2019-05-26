@@ -52,10 +52,10 @@
 	$c = $cost;
 	$a = $_GET['aid'];
 	if($a != 1 && $a != 2) //Don't skim admin campaigns
-		$c *= 1.2; //Do the skim (all accounts apart from admin) (40%)
+		$c *= 1.2; //Do the skim (all accounts apart from admin) (20%)
 	else
 	if($a == 2)
-		$c *= 1.3; //Do the skim (khoi) (30%)
+		$c *= 1.3; //Do the skim on account-id 2 (30%)
 	
 	//Update redis for a fork to mysql later
 	$pipe->incr('mb-'.$_GET['e'].'-wins', 1);
