@@ -24,3 +24,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ```
 The above licence is applicable to all files listed in this respository.
+
+![panel](https://github.com/VOXDSP/VOXDSP/blob/master/p1.jpeg)
+![panel](https://github.com/VOXDSP/VOXDSP/blob/master/p2.jpeg)
+![panel](https://github.com/VOXDSP/VOXDSP/blob/master/p4.jpeg)
